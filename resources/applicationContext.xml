@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="myApp.properties"/>
+    <bean id="myPet"
+          class="my.lessons.spring_introduction.helperClasses.Dog">
+    </bean>
+
+    <bean id="myPerson"
+          class="my.lessons.spring_introduction.helperClasses.Person">
+        <!--<constructor-arg ref="myPet"/> используется для передачи объекта в конструктор-->
+        <property name="pet" ref="myPet"/> <!--Добавление животного через сеттер setPet, для нахождения сеттера первая буква в параметре name увеличивается, а в начало приписывается слово pet-->
+        <property name="name" value="${person.name}"/>
+        <property name="age" value="${person.age}"/>
+
+    </bean>
+
+</beans>
