@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Способы конфигурации Spring Container:<br>
  * - XML file (устаревший способ) {@link XMLConfigWay}<br>
  * - Annotations + XML (современный способ) {@link AnnotationsPlusXMLConfigWay}<br>
- * - Java Code (современный способ)<br>
+ * - Java Code (современный способ) {@link JavaCode}<br>
  *
  *  @author kubarevd
  *  @version 1.0
